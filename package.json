@@ -43,6 +43,7 @@
     "not dead"
   ],
   "dependencies": {
-    "gsap": "^3.12.1"
+    "gsap": "^3.12.1",
+    "terser-webpack-plugin": "^5.3.9"
   }
 }

@@ -3,9 +3,11 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = (env = {}, argv = {}) => {
   return {
+    mode: argv.mode,
     devtool: "source-map",
     entry: path.join(__dirname, "src", "index.js"),
     output: {
@@ -81,6 +83,7 @@ module.exports = (env = {}, argv = {}) => {
     },
     optimization: {
       minimizer: [
+        new TerserPlugin(),
         new ImageMinimizerPlugin({
           minimizer: {
             implementation: ImageMinimizerPlugin.imageminMinify,
