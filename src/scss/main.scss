@@ -330,6 +330,53 @@ h2 {
       width: 100%;
     }
   }
+
+  .portpholio {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 10%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    top: 30%;
+
+    &__item {
+      display: block;
+      width: 15%;
+      height: 24%;
+      position: relative;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        height: 90%;
+      }
+
+      &-1 {
+        top: 14%;
+        right: -5.5%;
+      }
+
+      &-2 {
+        top: 17%;
+        left: 8%;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      &-3 {
+        top: 49%;
+        right: -0.8%;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -380,35 +427,3 @@ h2 {
     }
   }
 }
-
-// @media only screen and (min-width: 300px) {
-
-//   .main .contenedor-central .enlaces-ilustracion,
-//   .main .contenedor-central .enlaces-animacion {
-//     margin: 0 auto;
-//     position: absolute;
-//     z-index: 1000;
-//   }
-//   .main .contenedor-central .enlaces-ilustracion .i-uno,
-//   .main .contenedor-central .enlaces-ilustracion .i-dos,
-//   .main .contenedor-central .enlaces-ilustracion .i-tres,
-//   .main .contenedor-central .enlaces-ilustracion .a-uno,
-//   .main .contenedor-central .enlaces-ilustracion .a-dos,
-//   .main .contenedor-central .enlaces-ilustracion .a-tres,
-//   .main .contenedor-central .enlaces-animacion .i-uno,
-//   .main .contenedor-central .enlaces-animacion .i-dos,
-//   .main .contenedor-central .enlaces-animacion .i-tres,
-//   .main .contenedor-central .enlaces-animacion .a-uno,
-//   .main .contenedor-central .enlaces-animacion .a-dos,
-//   .main .contenedor-central .enlaces-animacion .a-tres {
-//     height: 45px;
-//     width: 45px;
-//     position: absolute;
-//     border-radius: 50%;
-//     border: 3px solid $enlaces;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     overflow: hidden;
-//   }
