@@ -29,6 +29,8 @@ let introAnimation = () => {
     start: "top top",
     scrub: true,
   });
+
+  return tlIntro;
 };
 
 let speechBubblesAnimation = () => {
@@ -108,22 +110,48 @@ let speechAnimation = () => {
     start: "bottom bottom",
     scrub: true,
   });
+
+  return tlSpeech;
 };
 
-const wide = window.innerWidth;
+const start = (wide) => {
+  if (wide < 1024) {
+    const tl1 = speechBubblesAnimation();
+    const tl2 = bugAnimation();
+    const tl3 = eyesAnimation();
 
-if (wide < 1024) {
-  speechBubblesAnimation();
-  bugAnimation();
-  eyesAnimation();
-} else {
-  introAnimation();
-  speechBubblesAnimation();
-  bugAnimation();
-  eyesAnimation();
-  speechAnimation();
-}
+    return () => {
+      tl1.revert().kill();
+      tl2.revert().kill();
+      tl3.revert().kill();
+    };
+  } else {
+    const tl1 = introAnimation();
+    const tl2 = speechBubblesAnimation();
+    const tl3 = bugAnimation();
+    const tl4 = eyesAnimation();
+    const tl5 = speechAnimation();
+
+    return () => {
+      tl1.revert().kill();
+      tl2.revert().kill();
+      tl3.revert().kill();
+      tl4.revert().kill();
+      tl5.revert().kill();
+    };
+  }
+};
+
+let windowWide = window.innerWidth;
+let kill = start(windowWide);
 
 window.onresize = function () {
-  location.reload();
+  const widthAfterResize = window.innerWidth;
+
+  if (windowWide !== widthAfterResize) {
+    windowWide = widthAfterResize;
+
+    kill();
+    kill = start(windowWide);
+  }
 };
