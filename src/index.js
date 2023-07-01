@@ -18,10 +18,10 @@ let introAnimation = () => {
     .set(".intro__content", { position: "fixed" })
     .to(".arrow", { autoAlpha: 0 })
     .to(".intro", { paddingRight: "65%", paddingLeft: "0", duration: 3 })
-    .to(".logo-overlay-circle", { height: 320, width: 320, duration: 3 })
-    .to(".logo-overlay-circle", { borderRadius: "10px", duration: 2 })
-    .to(".logo-overlay-circle", { height: "80%", duration: 2 })
-    .to(".logo-overlay-circle", { marginTop: 100, duration: 2 });
+    .to(".logo__overlay_circle", { height: 320, width: 320, duration: 3 })
+    .to(".logo__overlay_circle", { borderRadius: "10px", duration: 2 })
+    .to(".logo__overlay_circle", { height: "80%", duration: 2 })
+    .to(".logo__overlay_circle", { marginTop: 100, duration: 2 });
 
   ScrollTrigger.create({
     animation: tlIntro,

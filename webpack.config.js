@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = (env = {}, argv = {}) => {
   return {
@@ -75,6 +76,9 @@ module.exports = (env = {}, argv = {}) => {
       }),
       new MiniCssExtractPlugin({
         filename: "[name].[contenthash].css",
+      }),
+      new CopyPlugin({
+        patterns: [{ from: path.join(__dirname, "src", "static") }],
       }),
     ],
     devServer: {

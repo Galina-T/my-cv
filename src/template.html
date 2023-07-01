@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Резюме" />
+    <meta name="description" content="cv" />
     <meta name="keywords" content="QA engineer" />
     <link
       rel="icon"
@@ -14,36 +14,36 @@
       rel="apple-touch-icon"
       href="./static/favicon_ico/apple-touch-icon.png"
     />
-    <title>QA engineer resume</title>
+    <title>QA engineer-cv</title>
   </head>
   <body>
     <div class="container">
       <header class="intro">
         <div class="intro__content">
           <h2 class="intro__title">Galina Tuzhik</h2>
-          <div class="intro__logo">
+          <div class="intro__logo logo">
             <img
-              class="left-wing"
+              class="logo__left-wing"
               src="./images/left-wing.svg"
               alt="left-wing"
             />
             <img
-              class="photo"
+              class="logo__photo"
               src="./images/photo.svg"
               srcset="./images/photo@2x.png 2x"
               alt="photo"
             />
             <img
-              class="right-wing"
+              class="logo__right-wing"
               src="./images/right-wing.svg"
               alt="right-wing"
             />
-            <div class="logo-overlay" id="contenedorDatosGeneral">
-              <div class="logo-overlay-circle" id="contenedorDatos"></div>
+            <div class="logo__overlay" id="contenedorDatosGeneral">
+              <div class="logo__overlay_circle" id="contenedorDatos"></div>
             </div>
           </div>
           <h2 class="intro__text">Junior QA</h2>
-          <div class="social">
+          <div class="intro__social social">
             <a
               class="social__link"
               href="https://www.linkedin.com/in/galina-tuzhik/"
@@ -72,13 +72,13 @@
                 aria-hidden="true"
             /></a>
           </div>
-          <div class="speech">
-            <p class="speech_text">I will be</p>
-            <p class="speech_text">very happy</p>
-            <p class="speech_text">to work</p>
-            <p class="speech_text">with you!</p>
+          <div class="intro__speech speech">
+            <p class="speech__text">I will be</p>
+            <p class="speech__text">very happy</p>
+            <p class="speech__text">to work</p>
+            <p class="speech__text">with you!</p>
           </div>
-          <div class="arrow">
+          <div class="intro__arrow arrow">
             <img
               class="arrow__icon"
               src="./images/arrow.svg"
@@ -116,35 +116,57 @@
               alt="no_sadness"
             />
           </div>
-          <div class="portpholio">
-            <a
-              class="portpholio__item portpholio__item-1"
-              target="_blank"
-              href="https://gala-t.dev/projects/device/index.html"
-              ><img
-                src="./images/apple.png"
-                srcset="./images/apple@2x.png 2x"
-                alt="link"
-            /></a>
-            <a
-              class="portpholio__item portpholio__item-2"
-              target="_blank"
-              href="#"
-              ><img
-                src="./images/apple.png"
-                srcset="./images/apple@2x.png 2x"
-                alt="link"
-            /></a>
-            <a
-              class="portpholio__item portpholio__item-3"
-              target="_blank"
-              href="#"
-              ><img
-                src="./images/apple.png"
-                srcset="./images/apple@2x.png 2x"
-                alt="link"
-            /></a>
-          </div>
+          <section class="portpholio">
+            <div class="portpholio__block qa-items">
+              <a
+                class="portpholio__item qa-items__item"
+                target="_blank"
+                href="./plug.html"
+                ><img
+                  src="./images/apple.png"
+                  srcset="./images/apple@2x.png 2x"
+                  alt="link"
+              /></a>
+            </div>
+            <div class="portpholio__block front-items">
+              <a
+                class="portpholio__item front-items__item"
+                target="_blank"
+                href="./plug2.html"
+                ><img
+                  src="./images/apple.png"
+                  srcset="./images/apple@2x.png 2x"
+                  alt="link"
+              /></a>
+              <a
+                class="portpholio__item front-items__item"
+                target="_blank"
+                href="https://gala-t.dev/projects/device/index.html"
+                ><img
+                  src="./images/apple.png"
+                  srcset="./images/apple@2x.png 2x"
+                  alt="link"
+              /></a>
+              <a
+                class="portpholio__item front-items__item"
+                target="_blank"
+                href="https://gala-t.dev/projects/mishka/index.html"
+                ><img
+                  src="./images/apple.png"
+                  srcset="./images/apple@2x.png 2x"
+                  alt="link"
+              /></a>
+              <a
+                class="portpholio__item front-items__item"
+                target="_blank"
+                href="https://gala-t.dev/projects/gllacy/index.html"
+                ><img
+                  src="./images/apple.png"
+                  srcset="./images/apple@2x.png 2x"
+                  alt="link"
+              /></a>
+            </div>
+          </section>
         </div>
       </main>
     </div>

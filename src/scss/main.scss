@@ -60,7 +60,7 @@ h2 {
   align-items: center;
   z-index: 10000;
 
-  .intro__content {
+  &__content {
     height: 100vh;
     position: relative;
     display: flex;
@@ -69,36 +69,38 @@ h2 {
     justify-content: center;
   }
 
-  .intro__title {
+  &__title {
     font-family: "Shadows Into Light Two", cursive;
     font-size: 3em;
   }
 
-  .intro__logo {
+  &__logo {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 3rem 0 3rem 0;
     width: 100%;
     justify-content: space-around;
+  }
 
-    .left-wing {
+  .logo {
+    &__left-wing {
       width: 150px;
       padding-right: 1.8rem;
     }
 
-    .photo {
+    &__photo {
       position: absolute;
       z-index: 10;
       width: 150px;
     }
 
-    .right-wing {
+    &__right-wing {
       width: 150px;
       padding-left: 1.8rem;
     }
 
-    .logo-overlay {
+    &__overlay {
       height: 100%;
       width: 100%;
       position: absolute;
@@ -109,7 +111,7 @@ h2 {
       z-index: -200;
     }
 
-    .logo-overlay-circle {
+    &__overlay_circle {
       border-radius: 50%;
       background-color: $enlaces;
     }
@@ -121,19 +123,23 @@ h2 {
     justify-content: center;
     align-items: center;
 
-    .social__link {
+    &__link {
       display: inline-block;
       width: 29px;
       height: 29px;
       margin-right: 3px;
       margin-left: 3px;
+    }
+    &__icon {
+      color: $textoIntro;
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.7s;
+    }
 
-      .social__icon {
-        color: $textoIntro;
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
+    &__icon:hover {
+      transform: scale(1.1);
     }
   }
 
@@ -145,7 +151,7 @@ h2 {
     align-items: center;
     justify-content: center;
 
-    &_text {
+    &__text {
       font-family: $font-family-second;
       font-size: 1.3rem;
       line-height: 1.3;
@@ -162,7 +168,7 @@ h2 {
     animation: mover_flecha 0.8s ease infinite;
     margin-top: -35%;
 
-    .arrow__icon {
+    &__icon {
       display: block;
       width: 29px;
       height: 29px;
@@ -213,7 +219,7 @@ h2 {
   justify-content: flex-end;
   justify-content: flex-start;
 
-  .main__content {
+  &__content {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -227,7 +233,7 @@ h2 {
       position: relative;
       transform: translateZ(-100px);
 
-      .tree__img {
+      &__img {
         display: block;
         margin: 0 auto;
         width: 100%;
@@ -251,7 +257,7 @@ h2 {
         z-index: 30;
         position: relative;
 
-        .bug__img {
+        &__img {
           display: block;
           width: 100%;
           z-index: 30;
@@ -335,12 +341,20 @@ h2 {
     position: absolute;
     z-index: 1000;
     width: 100%;
-    height: 10%;
+    height: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     align-items: flex-start;
-    top: 30%;
+
+    &__block {
+      position: relative;
+      width: 100%;
+      height: 10%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
 
     &__item {
       display: block;
@@ -355,26 +369,53 @@ h2 {
 
       img {
         height: 90%;
+        transition: transform 0.7s;
       }
 
-      &-1 {
-        top: 14%;
-        right: -5.5%;
+      img:hover {
+        transform: scale(1.2);
       }
+    }
+  }
 
-      &-2 {
-        top: 17%;
-        left: 8%;
+  .qa-items {
+    top: 0;
 
-        img {
-          height: 100%;
-        }
+    &__item:nth-child(1) {
+      top: 64%;
+      right: 8.5%;
+    }
+  }
+
+  .front-items {
+    top: 20%;
+
+    &__item:nth-child(1) {
+      top: 18%;
+      right: 35%;
+
+      img {
+        height: 100%;
       }
+    }
 
-      &-3 {
-        top: 49%;
-        right: -0.8%;
+    &__item:nth-child(2) {
+      top: 14%;
+      right: -5.5%;
+    }
+
+    &__item:nth-child(3) {
+      top: 17%;
+      left: 8%;
+
+      img {
+        height: 100%;
       }
+    }
+
+    &__item:nth-child(4) {
+      top: 49%;
+      right: -0.8%;
     }
   }
 }
